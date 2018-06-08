@@ -6,5 +6,5 @@ Charts for product/department sales and inventory.
 
 
 # APIs 
-Pending
-Outside resource for graph
+>Pending
+>Outside resource for graph
