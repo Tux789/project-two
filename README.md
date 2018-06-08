@@ -8,3 +8,10 @@ Charts for product/department sales and inventory.
 # APIs 
 * Pending
 * Outside resource for graph
+
+
+# Tasks
+* Jeff backend api routes non graph models
+* Steven backend model and html page for graph
+* Laura HTML, CSS, Front end javascript
+* Zach 
