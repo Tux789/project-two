@@ -10,13 +10,14 @@ module.exports = function(sequelize, DataTypes) {
     
   });
 
-  // Invoice.associate = function(models) {
-  //   // Associating Author with Posts
-  //   // When an Author is deleted, also delete any associated Posts
-  //   Invoice.hasMany(models.Transaction, {
-  //     onDelete: "cascade"
-  //   });
-  // };
+  Invoice.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    Invoice.hasMany(models.LineItem, {
+      onDelete: "cascade"
+    });
+  };
+
 
   return Invoice;
 };
