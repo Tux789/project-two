@@ -4,11 +4,7 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DECIMAL,
       allowNull: false,
     },
-    createdAt: {
-      type: DataTypes.TIMESTAMP,
-      defaultValue: CURRENT_TIMESTAMP,
-      allowNull: false,
-    },
+
   });
 
   Transaction.associate = function(models) {
@@ -16,7 +12,12 @@ module.exports = function(sequelize, DataTypes) {
     // A Post can't be created without an Author due to the foreign key constraint
     Transaction.belongsTo(models.Invoice, {
       foreignKey: {
-        allowNull: false
+        allowNull: false,
+      }
+    });
+    Transaction.belongsTo(models.Product, {
+      foreignKey: {
+        allowNull: false,
       }
     });
   };

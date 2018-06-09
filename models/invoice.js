@@ -7,21 +7,16 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false,
     },
     total_price: DataTypes.DECIMAL,
-    createdAt: {
-      type: DataTypes.TIMESTAMP,
-      defaultValue: CURRENT_TIMESTAMP,
-      allowNull: false,
-    },
     
   });
 
-  Invoice.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Invoice.hasMany(models.Transaction, {
-      onDelete: "cascade"
-    });
-  };
+  // Invoice.associate = function(models) {
+  //   // Associating Author with Posts
+  //   // When an Author is deleted, also delete any associated Posts
+  //   Invoice.hasMany(models.Transaction, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   return Invoice;
 };
