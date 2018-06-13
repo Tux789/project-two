@@ -1,0 +1,140 @@
+
+#Name {
+  width: 300px;
+  height: 70px;
+/*  background: #b5bebe; */
+  opacity: 0.90; 
+  float: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  line-height: 90px;
+  color: #666; 
+  font-size: 45px;
+  text-decoration: none;
+  
+}
+
+.box {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
+}
+
+#masthead {
+  background: #fff; 
+  margin: 0 0 40px;
+  z-index: 99;
+  color: #fff;
+  overflow: auto;
+  border-bottom: 2px solid #ccc;
+  position: fixed;
+  width: 100%;
+}
+
+.nav {
+  float: right;
+}
+
+nav {
+  float: right;
+  margin-top: 25px;
+}
+
+nav a {
+  color: #999;
+  text-decoration: none;
+  margin-left: 15px;
+  display: inline-block;
+  border-left: 1px solid #efefef;
+  padding-left: 15px;
+  line-height: 18px;
+}
+
+nav a:first-child {
+  border-left: 0 none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body { 
+background-image: url("https://www.pixeden.com/media/k2/galleries/112/002-subtle-light-pattern-background-texture.jpg");
+background-position: center;
+background-repeat:  no-repeat;
+background-attachment: fixed;
+background-size:  cover;
+}
+
+
+div, body{
+margin: 0;
+padding: 0;
+font-family: exo, sans-serif;
+color: black;
+}
+
+#info {
+
+  width: 75%;
+  height: 40%;
+  border: 2px, black;
+}
+
+#example {
+  width: 75%;
+  height: 50%;
+  border: 2px, black;
+}
+
+.main {
+
+  width: 75%;
+  height: 75%;
+  border: 2px, black;
+  padding: 100px;
+}
+
+footer {
+  position: relative;
+  padding: 20px 0;
+  background: #698a8a;
+  color: #fff;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 100px;
+  clear: both;
+  color: #ccc;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.9; 
+}
+
+/* order */
+
+.card-text {
+  margin-top: 30px;
+  color: white;
+}
+
+.car-title {
+  font-size: 50px;
+}
+
+.card-body {
+  text-align: center;
+  background-color: #698a8a;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  color: white;
+}
+
+.input-group-append {
+  background-color: white;
+}
+
+.input-group-prepend {
+  background-color: white;
+}
