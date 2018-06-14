@@ -15,14 +15,15 @@
           <nav>
               <a href="order.html">Order</a>
               <a href="invoice.html">Invoice</a>
+              <a href="manager.html">Manager</a>
               <a href="charts.html">Charts</a>
           </nav>
       </div>
 </header>
 
 <div class="container">
-<div class="card cols-12">
-        <div class="card-body">
+<div id="card-body" class="card cols-12">
+        <div id="card" class="card-body">
           <h2 class="card-title">Sales Order</h2>
           <p class="card-text">What would you like to purchase?</p>
           <div class="input-group mb-3">
@@ -43,35 +44,83 @@
                 </div>
                     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
          </div>
-         <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-default">State</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-              </div>
+         <select class="form-control" id="inputGroupSelect01">
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AR">AR</option>	
+                <option value="AZ">AZ</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DC">DC</option>
+                <option value="DE">DE</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="IA">IA</option>	
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="MA">MA</option>
+                <option value="MD">MD</option>
+                <option value="ME">ME</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MO">MO</option>	
+                <option value="MS">MS</option>
+                <option value="MT">MT</option>
+                <option value="NC">NC</option>	
+                <option value="NE">NE</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>			
+                <option value="NV">NV</option>
+                <option value="NY">NY</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WI">WI</option>	
+                <option value="WV">WV</option>
+                <option value="WY">WY</option>
+            </select>
+              <br>
           <div class="input-group mb-3">
                 <div class="input-group-prepend">
                       <span class="input-group-text" id="inputGroup-sizing-default">Zip</span>
                 </div>
                 <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
          </div>
-
          <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <button type="button" class="btn btn-outline-secondary">Item</button>
-                  <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="sr-only">Toggle Dropdown</span>
-                  </button>
+                <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                  <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
+              </div>
+    
+              <select class="form-control" id="inputGroupSelect01">
                   <div class="dropdown-menu">
+                    <label class="input-group-text" for="inputGroupSelect01">Item</label>
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                     <div role="separator" class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Separated link</a>
                   </div>
-                </div>
-                <input type="text" class="form-control" aria-label="Text input with segmented dropdown button">
-              </div>
+            </select>
               <br>
           
               <div class="input-group mb-3">
@@ -97,7 +146,7 @@
     </div>
 </div>
 
-
+<hr>
 <footer class=" center footer">
         <div class="container">
             <p> copyright © Dime 2018</p>
