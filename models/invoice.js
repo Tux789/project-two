@@ -6,7 +6,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    total_price: DataTypes.DECIMAL,
+    email:{
+      type: DataTypes.STRING,
+    },
+    total_price: {
+      type: DataTypes.DECIMAL,
+      defaultValue: 0,
+    },
     
   });
 

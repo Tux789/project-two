@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
     total_product_sales: {
       type: DataTypes.DECIMAL,
       defaultValue: 0,
-      allowNull: false,
+      allowNull: true,
     },
 
   });
