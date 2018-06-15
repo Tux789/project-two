@@ -32,6 +32,19 @@ module.exports = function(sequelize, DataTypes) {
   //     Product.hasMany(models.Transaction, {
   //     });
   //   };
+  Product.bulkCreate([
+    {name: "Columbian", unit_price: 7.00, stock_quantity: 100},
+    {name: "Sumatra", unit_price: 9.00, stock_quantity: 100},
+    {name: "Costa Rica", unit_price: 8.00, stock_quantity: 100},
+    {name: "Guatamala", unit_price: 8.00, stock_quantity: 100},
+    {name: "Papa New Guinea", unit_price: 10.00, stock_quantity: 100},
+    {name: "Kona Blend", unit_price: 10.00, stock_quantity: 100},
+    {name: "Jamacian", unit_price: 8.00, stock_quantity: 100},
+    {name: "South African", unit_price: 7.00, stock_quantity: 100},
+    {name: "Brazilian", unit_price: 9.00, stock_quantity: 100},
+    {name: "French Roast", unit_price: 6.00, stock_quantity: 100},
+    {name: "Toasted Pecan", unit_price: 6.00, stock_quantity: 100}                
+  ]);
 
   return Product;
 };
