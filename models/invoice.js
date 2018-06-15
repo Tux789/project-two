@@ -6,12 +6,32 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email:{
+    buyer_city: {
       type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "Dallas",
+    },
+    buyer_state: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "TX",
+    },
+    buyer_zip: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      defaultValue: "75205",
+    },
+    buyer_email:{
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     total_price: {
       type: DataTypes.DECIMAL,
       defaultValue: 0,
+    },
+    order_cancelled: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     
   });
