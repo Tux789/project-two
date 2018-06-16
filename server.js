@@ -25,6 +25,10 @@ app.use(bodyParser.json());
 // Static directory
 app.use(express.static("public"));
 
+var initialize = require("./controllers/initialization");
+initialize.seedProducts();
+
+
 // Routes
 // =============================================================
 require("./controllers/api-routes")(app);
@@ -34,8 +38,8 @@ require("./controllers/html-routes")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
 });
