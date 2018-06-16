@@ -2,7 +2,13 @@ var db = require("../models");
 var email = require("./email-handler");
 var invoice = require("./invoice-handler");
 
-module.exports = function (app) {
+
+module.exports = function (app, passport) {
+    
+
+
+
+
 
     // get all products
     app.get("/api/products", function (req, res) {
