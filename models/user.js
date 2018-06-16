@@ -8,7 +8,6 @@ module.exports = function(sequelize, Sequelize) {
 		email: { type:Sequelize.STRING, validate: {isEmail:true} },
 		password : {type: Sequelize.STRING,allowNull: false }, 
         status: {type: Sequelize.ENUM('active','inactive'),defaultValue:'active' }
-
 });
 
 	return User;

@@ -10,24 +10,24 @@
 <body>
     <div class="container">
         <div class="header clearfix">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation"><a href="/sign">SignIn</a></li>
-                </ul>
-            </nav>
-            <hr />
-            <form id="signin" name="signin" method="POST" action="signup.html">
+            <div class="row">
+                <nav>
+                    <ul class="nav nav-pills pull-right">
+                        <h3 class="text-muted">Dime</h3>
+                        <li role="presentation"><a href="/signup">SignUp</a></li>
+                        <li role="presentation"><a href="/logout">LogOut</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <form id="signin" name="signin" method="POST" action="signin">
                 <label for="email">Email Address</label>
                 <input class="text" name="email" type="email" /><br>
-                <label for="firstname">FirstName</label>
-                <input class="text" name="firstname"  /><br>
-                <label for="lastname">LastName</label>
-                <input class="text" name="lastname"  /><br>
                 <label for="password">Password</label>
                 <input type="password" name="password"  /><br>
-                <input class="btn btn-second" type="submit" value="Sign Up" />
+                <input class="btn btn-second" type="submit" value="Sign In" />
             </form>
-            <h3 class="text-muted">Dime</h3>
+            
         </div>
     </div>
 
