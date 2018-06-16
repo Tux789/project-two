@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <script src="main.js"></script>
+
 </head>
 <body>
   <header id="masthead">
@@ -25,18 +25,10 @@
 <div id="card-body" class="card cols-12">
         <div id="card" class="card-body">
           <h2 class="card-title">Sales Order</h2>
-          <p class="card-text">What would you like to purchase?</p>
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-12">
                 <label for="inputEmail4"></label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Name">
-              </div>
-            </div>
-            <div class="form-group">
+                <input type="name" class="form-control" id="inputEmail4" placeholder="Name">
               <label for="inputAddress"></label>
               <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
           <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity"></label>
@@ -109,23 +101,22 @@
                   <span class="input-group-text" id="basic-addon2">@example.com</span>
                 </div>
               </div>
-          <div class="input-group mb-3">
+          <div id="coffeeform" class="input-group mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Item</label>
                 </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Columbian</option> <!--7.00/pound-->
-                    <option value="2">Sumatra</option> <!--9.00/pound-->
-                    <option value="3">Costa Rica</option> <!--8.00/pound-->
-                    <option value="4">Guatamala</option> <!--8.00/pound-->
-                    <option value="5">Papa New Guinea</option> <!--10.00/pound-->
-                    <option value="5">Kona Blend</option> <!--10.00/pound-->
-                    <option value="6">Jamacian</option> <!--8.00/pound-->
-                    <option value="7">South African</option> <!--7.00/pound-->
-                    <option value="8">Brazilian</option> <!--9.00/pound-->
-                    <option value="9">French Roast</option> <!--6.00/pound-->
-                    <option value="10">Toasted Pecan</option> <!--6.00/pound-->
+                <select class="custom-select" id="selectCoffee">
+                    <option value="1" data-unit-price="7">Columbian</option> <!--7.00/pound-->
+                    <option value="2" data-unit-price="9">Sumatra</option> <!--9.00/pound-->
+                    <option value="3" data-unit-price="8">Costa Rica</option> <!--8.00/pound-->
+                    <option value="4" data-unit-price="8">Guatamala</option> <!--8.00/pound-->
+                    <option value="5" data-unit-price="10">Papa New Guinea</option> <!--10.00/pound-->
+                    <option value="5" data-unit-price="10">Kona Blend</option> <!--10.00/pound-->
+                    <option value="6" data-unit-price="8">Jamacian</option> <!--8.00/pound-->
+                    <option value="7" data-unit-price="7">South African</option> <!--7.00/pound-->
+                    <option value="8" data-unit-price="9">Brazilian</option> <!--9.00/pound-->
+                    <option value="9" data-unit-price="6">French Roast</option> <!--6.00/pound-->
+                    <option value="10" data-unit-price="6">Toasted Pecan</option> <!--6.00/pound-->
                   </select>
           </div>
               <br>
@@ -133,18 +124,12 @@
                     <div class="input-group-prepend">
                       <label class="input-group-text" for="inputGroupSelect01">Quantity</label>
                     </div>
-                    <select class="custom-select" id="inputGroupSelect01">
+                    <select class="custom-select" id="amount">
                       <option selected>Choose...</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
+                      <option value="1">1 lb</option>
+                      <option value="2">2 lb</option>
+                      <option value="3">3 lb</option>
+ 
                     </select>
               </div>
 
@@ -152,9 +137,9 @@
          <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">$</span>
-                  <span class="input-group-text">0.00</span>
+             <!--     <span id="total" class="input-group-text">0.00</span> -->
                 </div>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <input id="total" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
               </div>
           <a href="#" id="button"class="btn btn-primary">Submit</a>
         </div>
@@ -163,10 +148,12 @@
 
 <hr>
 <footer class=" center footer">
-        <div class="container">
+        <div class="footer">
             <p> copyright © Dime 2018</p>
         </div>
 </footer>
+
+<script src="assets/js/client.js"></script>
     
 </body>
 </html>
