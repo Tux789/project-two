@@ -60,33 +60,60 @@ var coffeePrice = {
 
 var getCoffeePrice = function() {
 
-    var totalPrice = parseInt($("#selectCoffee").attr("data-unit-price")) * parseInt($("#selectQuantity").val());
-    $( "#button" ).on( "click", function() {
-       // console.log( $( this ).text() );
-      });
+    var totalPrice = parseInt($("#selectCoffee option").filter(":selected").attr("data-unit-price")) * parseInt($("#amount").val());
 
-    $("#total").text(totalPrice);
+    $("#total").text("$"+totalPrice);
     console.log(totalPrice);
-
+ 
+    console.log(parseInt($("#amount").val()));
+    console.log
 };
 
+$( "#button" ).on( "click", function() {
+    getCoffeePrice();
+  });
 
 
+// order
 
-                //  var totalPrice=0;
-                //  //Get a reference to the form id="coffeeform"
-                //  var theForm = document.forms("#coffeeform");
-                //  //Get a reference to the select id="coffee
-                //   var selectedCoffee = theForm.elements("#coffee");
-              
-                //  //set totalPrice equal to value user chose
-                //  totalPrice = coffee_prices(selectedCoffee.value);
-             
-                //  $("#total").text(totalPrice);
-              
-                //  //finally we return coffeePrice
-                //  return totalPrice;
-                //  console.log(totalPrice);
+
+// Manager
+
+
+//GET
+$.get( "/api/products", )
+  .done(function( data ) {
+  
+  });
+
+
+// PUT
+  $("#updateproduct").on("submit", function(event) {
+    // Make sure to preventDefault on a submit event.
+    event.preventDefault();
+
+    var id = $("[id=item]").val().trim();
+
+    var updatedProduct = {
+      movie: $("#updatproduct [name=product]").val().trim()
+    };
+
+    // Send the PUT request.
+    $.ajax("/api/products" + id, {
+      type: "PUT",
+      data: updatedProducts
+    }).then(
+      function() {
+        console.log("updated id ", id);
+        // Reload the page to get the updated list
+        location.reload();
+      }
+    );
+  });
+
+
+// invoice
+
 
 // get, put, and post for backend
 

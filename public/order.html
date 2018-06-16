@@ -26,17 +26,17 @@
         <div id="card" class="card-body">
           <h2 class="card-title">Sales Order</h2>
                 <label for="inputEmail4"></label>
-                <input type="name" class="form-control" id="inputEmail4" placeholder="Name">
+                <input type="name" class="form-control" id="input" name="order" placeholder="Name">
               <label for="inputAddress"></label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              <input type="text" class="form-control" id="input" name="order" placeholder="1234 Main St">
           <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity"></label>
-                    <input type="text" class="form-control" id="inputCity" placeholder="City">
+                    <input type="text" class="form-control" id="input" name="order" placeholder="City">
                 </div>
                   <div class="form-group col-md-4">
                     <label for="inputState"></label>
-                    <select class="form-control" id="inputGroupSelect01">
+                    <select class="form-control" id="input">
                       <option value="AL">AL</option>
                       <option value="AK">AK</option>
                       <option value="AR">AR</option>	
@@ -93,17 +93,17 @@
                   </div>
           <div class="form-group col-md-2">
                     <label for="inputZip"></label>
-                    <input type="text" class="form-control" id="inputZip" placeholder="Zip">
+                    <input type="text" class="form-control" id="input" name="order" placeholder="Zip">
                   </div>
          <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" class="form-control"  id="input" name="order" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">@example.com</span>
                 </div>
               </div>
           <div id="coffeeform" class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Item</label>
+                    <label class="input-group-text" for="inputGroupSelect01">Product</label>
                 </div>
                 <select class="custom-select" id="selectCoffee">
                     <option value="1" data-unit-price="7">Columbian</option> <!--7.00/pound-->
@@ -125,7 +125,6 @@
                       <label class="input-group-text" for="inputGroupSelect01">Quantity</label>
                     </div>
                     <select class="custom-select" id="amount">
-                      <option selected>Choose...</option>
                       <option value="1">1 lb</option>
                       <option value="2">2 lb</option>
                       <option value="3">3 lb</option>
@@ -139,16 +138,16 @@
                   <span class="input-group-text">$</span>
              <!--     <span id="total" class="input-group-text">0.00</span> -->
                 </div>
-                <input id="total" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <div class="form-control">Amount: <span id="total"></span></div> 
               </div>
-          <a href="#" id="button"class="btn btn-primary">Submit</a>
+          <a href="#" id="button" class="btn btn-primary">Submit</a>
         </div>
     </div>
 </div>
 
 <hr>
 <footer class=" center footer">
-        <div class="footer">
+        <div class="container">
             <p> copyright © Dime 2018</p>
         </div>
 </footer>
