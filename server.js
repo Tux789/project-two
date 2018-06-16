@@ -38,6 +38,14 @@ app.set('public', './public')
 // app.get('/', function(req, res){
 //       res.redirect('signup');
 // });
+app.use(session({ secret: 'secret',resave: true, saveUninitialized:true})); // session secret
+   app.use(passport.initialize());
+   app.use(passport.session()); // persistent login sessions
+
+
+var initialize = require("./controllers/initialization");
+initialize.seedProducts();
+
 
 //Express Validator
 app.use(expressValidator({
@@ -58,17 +66,17 @@ app.use(expressValidator({
 }));
 // Routes
 // =============================================================
-require("./controllers/api-routes")(app);
-require("./controllers/html-routes")(app);
-require('./routes/auth.js')(app, passport);
 require('./config/passport/passport.js')(passport, db.user);
+require("./controllers/api-routes")(app, passport);
+require("./controllers/html-routes")(app, passport);
+require('./routes/auth.js')(app, passport);
+
 
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync().then(function() {
-  console.log('Nice! Database looks fine')
-  app.listen(PORT, function() {
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
   });
 });

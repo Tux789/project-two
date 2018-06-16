@@ -1,15 +1,15 @@
 {
   "development": {
     "username": "root",
-    "password": "Raining2301",
-    "database": "sequelize_passport",
+    "password": "Swaff789",
+    "database": "dime_ERM",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
+    "password": "Swaff789",
     "database": "database_test",
     "host": "127.0.0.1",
     "port": 3306,
