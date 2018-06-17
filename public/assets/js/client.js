@@ -69,9 +69,9 @@ var getCoffeePrice = function() {
     console.log
 };
 
-$( "#button" ).on( "click", function() {
-    getCoffeePrice();
-  });
+// $( "#button" ).on( "click", function() {
+//     getCoffeePrice();
+//   });
 
 
 // order

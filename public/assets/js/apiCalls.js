@@ -18,9 +18,9 @@ getProduct = function(id) {
     })
     
 }
-createProduct = function (name, unit_price, stock_quantity) {
+createProduct = function (product) {
     return new Promise((resolve, reject) => {
-    $.post("/api/products", { name: name, unit_price: unit_price, stock_quantity: stock_quantity },(data) =>{
+    $.post("/api/products", product,(data) =>{
         resolve(data);
     }).catch((err) => {
         reject(err);

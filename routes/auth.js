@@ -6,23 +6,34 @@ module.exports = function(app, passport){
     app.get('/signin', authController.signin);
 
     app.post('/signup', passport.authenticate('local-signup',
-        { successRedirect: '/signin',
-        failureRedirect: '/signup'}
+        {   successRedirect: '/signin',
+            failureRedirect: '/signup',
+            failureFlash: true}
     ));
 
     app.get('/dashboard',isLoggedIn, authController.dashboard);
+    
+    app.get('/invoice', authController.invoice);
+
+    app.get('/order', authController.order);
+
+    app.get('/manager',authController.manager);
+
+    app.get('/charts',isLoggedIn, authController.charts);
 
     app.get('/logout',authController.logout);
 
     app.post('/signin', passport.authenticate('local-signin',  
-        { successRedirect: '/index',                                              
-          failureRedirect: '/signin'} ));
+        { successRedirect: '/dashboard',                                              
+          failureRedirect: '/signin',
+          failureFlash: true}));
 
 
     function isLoggedIn(req, res, next) {
-        if (req.isAuthenticated())
-            return next();
-
-        res.redirect('/signin');
+        if (req.isAuthenticated()){
+            return next()
+        }else{
+            res.redirect('/signin');
+        }        
     }
 }

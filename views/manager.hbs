@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dime</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    {{!-- <link href="/assets/css/jumbotron-narrow.css" rel="stylesheet" type="text/css"> --}}
+  </head>
+  <body>
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="/dashboard">About</a></li>
+            <li role="presentation" ><a href="/order">Order</a></li>
+            <li role="presentation" ><a href="/invoice">Invoice</a></li>
+            <li role="presentation" class="disabled"><a href="/manager">Manager</a></li>
+            <li role="presentation" ><a href="/charts">Statistics</a></li>
+            <li role="presentation"><a href="/signin">Logout</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Dime</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1 class="text-center">Welcome to Dime Platform</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      </div>
+
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                <form id="create" name="CreateNewProduct" height='250'>
+                    <h2>Create New Product</h2>
+                    <div class="form-group">
+                        <label for="productCreateName" class="sc-only">ProductName</label>
+                        <input type="text" class="form-control" id="productCreateName" placeholder="Product Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="productCreatePrice">UnitPrice</label>
+                        <input type="text" class="form-control" id="productCreatePrice" placeholder="Unit Price">
+                    </div>
+                    <div class="form-group">
+                    <label for="productCreateStock">Stock Quantity</label>
+                    <input type="text" class="form-control" id="productCreateStock" placeholder="Stock QUantity">
+                    </div>
+                    <button id="submitCreate" type="button" class="btn btn-lg btn-primary">Save</button>
+                </form>
+              </div>
+
+              <div class="col-lg-6">
+                  <form id="create" name="UpdateProduct" height='250' data-product-id=1>
+                    <h2><button id="prevProd" class="btn disabled" type="button"><</button>Update Current Product<button id="nextProd" type="button" class="btn">></button></h2>
+                    <div class="form-group">
+                        <label for="productUpdateName" class="sc-only">ProductName</label>
+                        <input type="text" class="form-control" id="productUpdateName" placeholder="Product Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="productUpdatePrice">UnitPrice</label>
+                        <input type="text" class="form-control" id="productUpdatePrice" placeholder="Unit Price">
+                    </div>
+                    <div class="form-group">
+                    <label for="productUpdateStock">Stock Quantity</label>
+                    <input type="text" class="form-control" id="productUpdateStock" placeholder="Stock QUantity">
+                    </div>
+                    <button id="submitUpdate" type="button" class="btn btn-lg btn-primary">Edit</button>
+                </form>
+              </div>
+          </div>
+      </div>  
+    <hr />    
+    <div class="container">
+        <footer class="footer">
+            <p>&copy; 2018 DIME Company, Inc.</p>
+        </footer>
+    </div>
+    
+</div>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="/assets/js/apiCalls.js"></script>
+      <script src="/assets/js/manager.js"></script>    
+</body>
+</html>
