@@ -8,7 +8,7 @@ console.log(totalPrice);
 
 getProducts().then((products)=>{
 $("#addLineItem").on("click",() => {renderNewLineItem(products)});
-$("#button").on( "click", () => {postInvoice()});
+$("#submit").on( "click", () => {postInvoice()});
 renderNewLineItem(products);
 
 });
@@ -17,10 +17,10 @@ renderNewLineItem(products);
 
 
 function renderNewLineItem(products){
-    var newDiv = $("<div>").addClass("line-item");
+    var newDiv = $("<div>").addClass("line-item row");
     var newPSelectLabelDiv = $("<div>").addClass("input-group-prepend");
     var newPSelectLabel = $("<label>").addClass("input-group-text").text("Item");
-    var newPSelectTag = $("<select>").addClass("custom-select productSelect");
+    var newPSelectTag = $("<select>").addClass("form-control col-md-4 productSelect");
         for(var i = 0; i<products.length; i++){
             var newPOption = $("<option>").val(products[i].id).attr("data-unit-price",products[i].unit_price)
                 .text(products[i].name);
@@ -28,7 +28,7 @@ function renderNewLineItem(products){
         };
         var newQSelectLabelDiv = $("<div>").addClass("input-group-prepend");
         var newQSelectLabel = $("<label>").addClass("input-group-text").text("Quantity");
-        var newQInput = $("<select>").addClass("custom-select quantitySelect");
+        var newQInput = $("<select>").addClass("form-control col-md-4 quantitySelect");
         for(var i= 1; i<11;i++){
             var newQOption = $("<option>").val(i).text(i+"lbs.");
             newQInput.append(newQOption);

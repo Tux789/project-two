@@ -9,7 +9,7 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Custom styles for this template -->
-    <link href="../public/css/jumbotron-narrow.css" rel="stylesheet" type="text/css">
+    <link rel="../public/css/jumbotron-narrow.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="container">
@@ -17,7 +17,8 @@
         <nav>
           <ul class="nav nav-pills pull-right">
             <li role="presentation" ><a href="/dashboard">About</a></li>
-            <li role="presentation" ><a href="/order">Order</a></li>
+            <li role="presentation" class="disabled" ><a href="/order">Order</a></li>
+            <li role="presentation" ><a href="/invoice">Invoice</a></li>
             <li role="presentation" ><a href="/manager">Manager</a></li>
             <li role="presentation" ><a href="/charts">Statistics</a></li>
             <li role="presentation"><a href="/signin">Logout</a></li>
@@ -32,24 +33,20 @@
       </div>
 
       <div class="container">
-          <form id="create" name="invoice" method="POST" action="#" height='250'>
+          <form id="create" name="invoice" height='250'>
             <h2>Make your Order</h2>
             <div class="form-group">
-              <label for="firstName">FirstName</label>
-              <input type="text" class="form-control" name="firstname" placeholder="First Name">
-            </div>
-            <div class="form-group">
-              <label for="lastName">LastName</label>
-              <input type="text" class="form-control" name="lasttname" placeholder="Last Name">
+              <label for="inputName">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Name">
             </div>
             <div class="form-group">
               <label for="address">Your address</label>
-              <input type="text" class="form-control" name="address" placeholder="1234 Main St">
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="input" name="order" placeholder="City">
+                    <input type="text" class="form-control" id="inputCity" name="order" placeholder="City">
                 </div>
                   <div class="form-group col-md-4">
                     <label for="inputState">State</label>
@@ -110,25 +107,21 @@
                   </div>
             <div class="form-group col-md-2">
                     <label for="inputZip">Zipcode</label>
-                    <input type="text" class="form-control" id="input" name="order" placeholder="Zip">
+                    <input type="text" class="form-control" id="inputZip" name="order" placeholder="Zip">
                   </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="password" class="form-control" name="email" placeholder="Email">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email">
             </div>
-            <div class="form-group">
-              <label for="ProductId">ProductID</label>
-              <input type="text" class="form-control" name="ProductId" placeholder="ProductID">
-            </div>
-            <div class="form-group">
-              <label for="Quantity">Quantity</label>
-              <input type="text" class="form-control" name="Quantity" placeholder="Quantity">
-            </div>
-            
+            <div id="coffeeForm" class="input-group mb-10">
+
+              </div>
+              <button id="addLineItem" class="btn btn-primary" type="button">Add Another Item</button>
+              <br>
               <label>
                 Please make sure your input correct information!
               </label><br>
-            <input id="submit" type="submit" class="btn btn-lg btn-success" value="Submit">
+            <button id="submit" type="button" class="btn btn-lg btn-success">Submit</button>
             {{!-- <input id="submit" type="submit" class="btn btn-lg btn-primary" value="Edit"> --}}
             {{!-- <input id="submit" type="submit" class="btn btn-lg btn-warning" value="Cancel"> --}}
         </form>
@@ -138,7 +131,9 @@
       <footer class="footer">
         <p>&copy; 2018 DIME Company, Inc.</p>
       </footer>
-
-    </div>    
+    </div>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="/assets/js/apiCalls.js"></script>
+      <script src="/assets/js/order.js"></script>    
   </body>
 </html>
