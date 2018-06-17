@@ -63,7 +63,7 @@ var invoiceHandler = {
                 //end forEach lineItem           
             })
         }).then((results) => {
-            email(returnObject);
+            email.sendCustomerInvoice(returnObject);
             res.status("200").json(returnObject);
         }).catch((err) => {
             handleError(res, err);

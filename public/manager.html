@@ -1,75 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>Order</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="assets/js/client.js"></script>
 </head>
+
 <body>
-  <header id="masthead">
-      <div class="box">
-          <a href="index.html" id="Name">Dime</a>
-          <nav>
-              <a href="order.html">Order</a>
-              <a href="invoice.html">Invoice</a>
-              <a href="manager.html">Manager</a>
-              <a href="charts.html">Charts</a>
-          </nav>
-      </div>
-</header>
+    <header id="masthead">
+        <div class="box">
+            <a href="index.html" id="Name">Dime</a>
+            <nav>
+                <a href="order.html">Order</a>
+                <a href="invoice.html">Invoice</a>
+                <a href="manager.html">Manager</a>
+                <a href="charts.html">Charts</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="container">
-    <div class="row">
-        <div id="create" id="updateproduct"class="create col md">
-            <h2>Create Product</h2>
-                
-            <input class="form-control" type="text" name="product" placeholder="Product Name">
-            <br>
-            <input class="form-control" type="text" placeholder="Unit Price">
-            <br>
-            <input class="form-control" type="text" placeholder="Stock Quantity">
-            <br>
-	                <button id="button" type="submit">Save Product!</button>
-                </form>
-       </div>
- 
+    <div class="container">
+        <div class="row">
+            <div  id="createProduct" class="create col-md-6">
+                <h2>Create Product</h2>
 
-    <div id="current" class="current col md">
-        <h2>Current Products</h2>
-        <input class="form-control" type="text" id="item" name="product" placeholder="Product Name">
-        <br>
-        <input class="form-control" type="text" id="item" name="product" placeholder="Unit Price">
-        <br>
-        <input class="form-control" type="text" id="item" name="product" placeholder="Stock Quantity">
-        <br>	                
-            <button id="button" type="submit">Edit Product</button>
-
+                <input class="form-control" type="text" id="productCreateName" placeholder="Product Name">
+                <br>
+                <input class="form-control" type="text" id="productCreatePrice" placeholder="Unit Price">
+                <br>
+                <input class="form-control" type="text" id="productCreateStock" placeholder="Stock Quantity">
+                <br>
+                <button id="createProductButton" class="btn btn-primary"  type="button">Save Product!</button>
             </form>
+            </div>
+
+
+            <div id="updateProduct" class="current col-md-6" data-current-product-id=1>
+                <h2><button id="prevProdButton"><</button>Current Products<button id="nextProdButton">></button></h2>
+                <input class="form-control" type="text" id="productUpdateName" name="product" placeholder="Product Name">
+                <br>
+                <input class="form-control" type="text" id="productUpdatePrice" name="product" placeholder="Unit Price">
+                <br>
+                <input class="form-control" type="text" id="productUpdateStock" name="product" placeholder="Stock Quantity">
+                <br>
+                <button id="updateProductButton" class="btn btn-primary" type="button">Edit Product</button>
+            </div>
         </div>
     </div>
-</div>
 
 
-<!-- form-->
+    <!-- form-->
 
-<!-- create product -->
+    <!-- create product -->
 
-<!-- name -->
-<!-- unit_price -->
-<!-- stock quantity -->
-<!--Submit Button-->
+    <!-- name -->
+    <!-- unit_price -->
+    <!-- stock quantity -->
+    <!--Submit Button-->
 
-<!-- Exsisting Products-->
-<!-- unit_price $ -->
-<!-- stock quantity -->
-<hr>
-<footer class=" center footer">
-    <div class="container">
-        <p> copyright © Dime 2018</p>
-    </div>
-</footer>
+    <!-- Exsisting Products-->
+    <!-- unit_price $ -->
+    <!-- stock quantity -->
+    <hr>
+    <footer class=" center footer">
+        <div class="container">
+            <p> copyright © Dime 2018</p>
+        </div>
+    </footer>
 </body>
+
 </html>
