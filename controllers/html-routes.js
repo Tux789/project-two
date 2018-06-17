@@ -2,27 +2,26 @@ var path = require("path")
 var authController = require("./authcontroller");
 
 module.exports = function (app, passport) {
-    app.get("/", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/index.html"));
-    });
+    // app.get("/", function (req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/dashboard.html"));
+    // });
 
-    app.get("/invoice", authController.isLoggedIn, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/invoice.html"));
-    });
+    // app.get("/invoice", authController.isLoggedIn, function (req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/invoice.html"));
+    // });
 
-    app.get("/manager", authController.isLoggedIn, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/manager.html"));
-    });
+    // app.get("/manager", authController.isLoggedIn, function (req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/manager.html"));
+    // });
 
-    app.get("/charts", authController.isLoggedIn, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/charts.html"));
-       // res.sendFile(path.join(__dirname, "../public/chartTest.html"));
-    });
+    // app.get("/charts", authController.isLoggedIn, function (req, res) {
+    //     res.render('charts');
+    // });
 
 
-    app.get("/order", authController.isLoggedIn, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/order.html"));
-    });
+    // app.get("/order", authController.isLoggedIn, function (req, res) {
+    //     res.sendFile(path.join(__dirname, "../public/order.html"));
+    // });
 
     app.get('/signup', authController.signup);
 

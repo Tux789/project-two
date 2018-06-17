@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SignUp</title>
+    <title>Dime</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Custom styles for this template -->
@@ -16,11 +16,11 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="disabled"><a href="#">Order</a></li>
-            <li role="presentation" class="disabled"><a href="#">Invoice</a></li>
-            <li role="presentation" class="disabled"><a href="#">Manager</a></li>
-            <li role="presentation" class="disabled"><a href="#">Statistics</a></li>
-            <li role="presentation"><a href="/signin">SignIn</a></li>
+            <li role="presentation" ><a href="/dashboard">About</a></li>
+            <li role="presentation" ><a href="/order">Order</a></li>
+            <li role="presentation" ><a href="/manager">Manager</a></li>
+            <li role="presentation" ><a href="/charts">Statistics</a></li>
+            <li role="presentation"><a href="/signin">Logout</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Dime</h3>
@@ -31,15 +31,8 @@
         <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
       </div>
 
-        <form id="signup" name="signup" method="post" action="/signup" height='350'>
-            <div class="form-group">
-              <label for="email">Email address</label>
-              <input type="email" class="form-control" name="email" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" name="password" placeholder="Password">
-            </div>
+        <form id="create" name="invoice" method="POST" action="#" height='250'>
+            <h2>Create your own Invoice</h2>
             <div class="form-group">
               <label for="firstName">FirstName</label>
               <input type="text" class="form-control" name="firstname" placeholder="First Name">
@@ -48,13 +41,30 @@
               <label for="lastName">LastName</label>
               <input type="text" class="form-control" name="lasttname" placeholder="Last Name">
             </div>
-
-            <div class="checkbox">
-              <label>
-                If you already have an account, please sign in!
-              </label>
+            <div class="form-group">
+              <label for="address">Your address</label>
+              <input type="text" class="form-control" name="address" placeholder="Address">
             </div>
-            <input id="submit" type="submit" class="btn btn-lg btn-success" value="Sign Up">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="password" class="form-control" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="ProductId">ProductID</label>
+              <input type="text" class="form-control" name="ProductId" placeholder="ProductID">
+            </div>
+            <div class="form-group">
+              <label for="Quantity">LastName</label>
+              <input type="text" class="form-control" name="Quantity" placeholder="Quantity">
+            </div>
+            
+            
+              <label>
+                Please make sure your input correct information!
+              </label>
+            {{!-- <input id="submit" type="submit" class="btn btn-lg btn-success" value="Submit"> --}}
+            <input id="submit" type="submit" class="btn btn-lg btn-primary" value="Edit">
+            <input id="submit" type="submit" class="btn btn-lg btn-warning" value="Cancel">
         </form>
 
       <footer class="footer">
@@ -64,5 +74,3 @@
     </div>    
   </body>
 </html>
-
-

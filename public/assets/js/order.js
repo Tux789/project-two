@@ -1,7 +1,4 @@
-
-
-
-    
+   
 var getCoffeePrice = function() {
     var totalPrice = parseInt($("#selectCoffee option").filter(":selected").attr("data-unit-price")) * parseInt($("#selectQuantity").val());
 // console.log( $( this ).text() );

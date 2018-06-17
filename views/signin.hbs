@@ -1,52 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dime</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>SIGNIN</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="../public/assets/css/stickyfooter.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-    <div class="container">
-        <div class="header clearfix">
-            <div class="row">
-                <nav>
-                    <ul class="nav nav-pills pull-right">
-                        <h3 class="text-muted">Dime</h3>
-                        <li role="presentation"><a href="/signup">SignUp</a></li>
-                        <li role="presentation"><a href="/logout">LogOut</a></li>
-                    </ul>
-                </nav>
+<div class="container">
+  <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="disabled"><a href="#">Order</a></li>
+            <li role="presentation" class="disabled"><a href="#">Invoice</a></li>
+            <li role="presentation" class="disabled"><a href="#">Manager</a></li>
+            <li role="presentation" class="disabled"><a href="#">Statistics</a></li>
+            <li role="presentation"><a href="/signup">SignUp</a></li>
+          </ul>
+        </nav>
+      <h3 class="text-muted">Dime</h3>
+  </div>  
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h2>Welcome to Dime Platform</h2>
+      <hr />
+      <h3 class="h3 mb-3 font-weight-normal">Please sign in</h3>
+      <form class="form-horizonal" id="signin" name="signin" method="POST" action="signin">
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" name="email" placeholder="Email">
+              </div>
             </div>
-            
-            <form id="signin" name="signin" method="POST" action="signin">
-                <label for="email">Email Address</label>
-                <input class="text" name="email" type="email" /><br>
-                <label for="password">Password</label>
-                <input type="password" name="password"  /><br>
-                <input class="btn btn-second" type="submit" value="Sign In" />
-            </form>
-            
-        </div>
-    </div>
-
-    <!-- <div class="row">
-        <div class="col-lg-12">
-            {{#if success_msg}}
-            <div class="alert alert-success">{{success_msg}}</div>
-            {{/if}}
-
-            {{#if error_msg}}
-            <div class="alert alert-danger">{{error_msg}}</div>
-            {{/if}}
-
-            {{#if error}}
-            <div class="alert alert-danger">{{error}}</div>
-            {{/if}}
-          
-            {{{body}}}
-        </div>
-    </div> -->
+            <div class="form-group">
+              <label for="password" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"> Remember me
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button id= "signin" type="submit" class="btn btn-lg btn-primary btn-block">Sign in</button>
+              </div>
+            </div>
+    </form>
+  </div>
+      
+</div>
+</div> 
+<div class="container">
+  <span class="text-muted">&copy; 2018 DIME Company, Inc.</span>
+</div>
 </body>
 </html>
