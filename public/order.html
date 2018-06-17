@@ -25,8 +25,8 @@
 <div id="card-body" class="card cols-12">
         <div id="card" class="card-body">
           <h2 class="card-title">Sales Order</h2>
-                <label for="inputEmail4"></label>
-                <input type="name" class="form-control" id="inputEmail4" placeholder="Name">
+                <label for="inputName"></label>
+                <input type="name" class="form-control" id="inputName" placeholder="Name">
               <label for="inputAddress"></label>
               <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
           <div class="form-row">
@@ -36,7 +36,7 @@
                 </div>
                   <div class="form-group col-md-4">
                     <label for="inputState"></label>
-                    <select class="form-control" id="inputGroupSelect01">
+                    <select class="form-control" id="inputState">
                       <option value="AL">AL</option>
                       <option value="AK">AK</option>
                       <option value="AR">AR</option>	
@@ -89,57 +89,21 @@
                       <option value="WV">WV</option>
                       <option value="WY">WY</option>
                   </select>
-                    </select>
                   </div>
           <div class="form-group col-md-2">
                     <label for="inputZip"></label>
                     <input type="text" class="form-control" id="inputZip" placeholder="Zip">
                   </div>
          <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="text" id="inputEmail" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">@example.com</span>
                 </div>
               </div>
-          <div id="coffeeform" class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Item</label>
-                </div>
-                <select class="custom-select" id="selectCoffee">
-                    <option value="1" data-unit-price="7">Columbian</option> <!--7.00/pound-->
-                    <option value="2" data-unit-price="9">Sumatra</option> <!--9.00/pound-->
-                    <option value="3" data-unit-price="8">Costa Rica</option> <!--8.00/pound-->
-                    <option value="4" data-unit-price="8">Guatamala</option> <!--8.00/pound-->
-                    <option value="5" data-unit-price="10">Papa New Guinea</option> <!--10.00/pound-->
-                    <option value="5" data-unit-price="10">Kona Blend</option> <!--10.00/pound-->
-                    <option value="6" data-unit-price="8">Jamacian</option> <!--8.00/pound-->
-                    <option value="7" data-unit-price="7">South African</option> <!--7.00/pound-->
-                    <option value="8" data-unit-price="9">Brazilian</option> <!--9.00/pound-->
-                    <option value="9" data-unit-price="6">French Roast</option> <!--6.00/pound-->
-                    <option value="10" data-unit-price="6">Toasted Pecan</option> <!--6.00/pound-->
-                  </select>
-          </div>
-              <br>
-              <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <label class="input-group-text" for="inputGroupSelect01">Quantity</label>
-                    </div>
-                    <select class="custom-select" id="amount">
-                      <option value="1">1 lb</option>
-                      <option value="2">2 lb</option>
-                      <option value="3">3 lb</option>
- 
-                    </select>
-              </div>
+              <div id="coffeeForm" class="input-group mb-10">
 
-              <!--add per pound-->
-         <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">$</span>
-             <!--     <span id="total" class="input-group-text">0.00</span> -->
-                </div>
-                <input id="total" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
               </div>
+              <button id="addLineItem" class="btn btn-primary">Add Another Item</button>
           <a href="#" id="button"class="btn btn-primary">Submit</a>
         </div>
     </div>
@@ -152,7 +116,8 @@
         </div>
 </footer>
 
-<script src="assets/js/client.js"></script>
+<script src="assets/js/apiCalls.js"></script>
+<script src="assets/js/order.js"></script>
     
 </body>
 </html>
