@@ -7,7 +7,6 @@ module.exports = function (app, passport) {
     });
 
     app.get("/invoice", authController.isLoggedIn, function (req, res) {
-        console.log(req.user);
         res.sendFile(path.join(__dirname, "../public/invoice.html"));
     });
 
