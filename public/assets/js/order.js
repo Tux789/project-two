@@ -61,7 +61,9 @@ function postInvoice(){
     };
     //validate(invoice);
     console.log(invoice);
-    console.log(createInvoice(invoice));
+    console.log(createInvoice(invoice).catch((err) => {
+        alert("Data could not be added to database, Please check all fields to make sure they are accurate");
+    }));
 }
 
 /* <div id="coffeeform" class="input-group mb-3">

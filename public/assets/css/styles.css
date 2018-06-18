@@ -13,6 +13,16 @@
   text-decoration: none;
   
 }
+.invisible{
+  visibility: hidden !important;
+}
+.visible{
+  visibility: visible;
+}
+.order-cancelled{
+  border: 5px solid red !important;
+  background: rgba(255,0,0,0.5) !important;
+}
 
 .box {
   width: 100%;

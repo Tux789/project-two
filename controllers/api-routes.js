@@ -61,7 +61,7 @@ module.exports = function (app, passport) {
     });
     app.get("/api/invoice/:id", function(req,res) {
         db.Invoice.findOne({
-            where: {id: req.params.id}})
+            where: {id: req.params.id}, include: [db.LineItem] })
             .then((dbInvoice) => {
             res.status("200").json(dbInvoice);
         }).catch((err) => {
@@ -71,7 +71,7 @@ module.exports = function (app, passport) {
     });
     app.put("/api/invoice", function (req, res) {
         db.Invoice.update(req.body, {
-            where: { id: req.params.id }
+            where: { id: req.body.id }
         }, {
                 fields: ["buyer_name", "buyer_address", "buyer_city", "buyer_state",
                     "buyer_zip", "buyer_email", "order_cancelled"]
