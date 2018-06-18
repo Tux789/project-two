@@ -91,12 +91,12 @@ color: black;
 .main {
 
   width: 75%;
-  height: 75%;
+ /* height: 75%;*/
   border: 2px, solid black;
   padding: 100px;
 }
 
-.footer {
+/*.footer {
   position: relative;
   padding: 25px 0;
   background: #698a8a;
@@ -106,7 +106,19 @@ color: black;
   text-align: center;
   font-size: 15px;
   opacity: 0.75; 
+}*/
+
+/* Dashboard */
+.jumbotron {
+  text-align: center;
+  color: #313d3d;
 }
+
+#category {
+  color: #313d3d;
+}
+
+
 
 /* order */
 
@@ -122,7 +134,7 @@ color: black;
 #card-body {
   width: 100%;
   border: 2px solid black;
-  padding: 25px;
+ /* padding: 25px;*/
   background-color: #f5fafa;
   margin-bottom: 50px;
 }
@@ -157,7 +169,7 @@ color: black;
   width: 500px;
   border: 2px solid black;
   padding: 25px;
-  margin: 100px 30px 300px 50px;
+  margin: 100px 30px 300px 35px;
   clear: left;
   float: left;
   background: #698a8a;
@@ -166,15 +178,26 @@ color: black;
 
 }
 
-#current {
+#UpdateProduct {
   width: 500px;
   border: 2px solid black;
   padding: 25px;
-  margin: 100px 50px 300px 50px;
+  margin: 100px 35px 300px 50px;
   float: right;
   clear: right;
   background: #698a8a;
   color: white;
+}
+
+#prevProd {
+  margin-right: 5px;
+  background-color: white;
+  color: #698a8a;
+}
+
+#nextProd {
+  margin-left: 5px;
+  color: #698a8a;
 }
 
 #button {
@@ -187,4 +210,12 @@ color: black;
   font-weight: bold;
   font-size: 16px;
   border-radius: 5px;
+}
+
+/*charts */
+
+#charts {
+  width: 1200px;
+  background-color: white;
+  margin-top: 30px;
 }
