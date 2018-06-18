@@ -1,15 +1,20 @@
 $("#submitSearch").on("click", () => {
     id = parseInt($("#searchFor").val().trim());
     console.log(getInvoice(id).then((invoice) => {
-        $("#create").removeClass("invisible").addClass("visible");
+        $("#card").removeClass("invisible").addClass("visible");
+        $("#card").attr("data-id",id);
         console.log(invoice);
-        displayInvoice(invoice)
-        $("#submit").on("click",() => {updateInvoice(id)});
+        displayInvoice(invoice);
+        $("#submit").on("click",() => {updateCurrentInvoice(id)});
         $("#cancel").on("click", () => {cancelInvoice(id)});
     }).catch((err) => {
         alert("Data could not be passed to database, Please check all fields to make sure they are accurate");
     }));
 });
+
+getSearchedInvoice = function() {
+
+}
 
 displayInvoice = function (invoice) {
     // var lineItems = [];
@@ -20,6 +25,13 @@ displayInvoice = function (invoice) {
     //     });
     // });
     // console.log();
+    if(invoice.order_cancelled){
+        $("#card").addClass("order-cancelled");
+        $("#cancel").addClass("disabled");
+    }else{
+        $("#card").removeClass("order-cancelled");
+        $("#cancel").removeClass("disabled");
+    }
 
     $("#inputName").val(invoice.buyer_name);
     $("#inputAddress").val(invoice.buyer_address);
@@ -57,17 +69,20 @@ function displayNewLineItem(lineItem){
 }
 cancelInvoice = function(id){
     var invoice = {
-        id: id,
+        id: parseInt($("#card").attr("data-id")),
         order_cancelled: true,
     }
-    console.log(updateInvoice(invoice).catch((err) => {
+    console.log(updateInvoice(invoice).then((invoice) => {
+        displayInvoice(invoice);
+    }).catch((err) => {
         alert("Data could not be passed to database, Please check all fields to make sure they are accurate");
     }));
+    displayInvoice(invoice);
 }
 
 updateCurrentInvoice = function(id){
     var invoice = {
-        id: id,
+        id: parseInt($("#card").attr("data-id")),
         buyer_name: $("#inputName").val().trim(),
         buyer_address: $("#inputAddress").val().trim(),
         buyer_city: $("#inputCity").val().trim(),
@@ -75,7 +90,10 @@ updateCurrentInvoice = function(id){
         buyer_zip: $("#inputZip").val().trim(),
         buyer_email: $("#inputEmail").val().trim(),
     };
-    console.log(updateInvoice(invoice).catch((err) => {
+    console.log(invoice);
+    console.log(updateInvoice(invoice).then((invoice) => {
+        displayInvoice(invoice);
+    }).catch((err) => {
         alert("Data could not be passed to database, Please check all fields to make sure they are accurate");
     }));
 }

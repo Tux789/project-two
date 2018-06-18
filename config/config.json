@@ -1,7 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "Swaff789",
+
+  "password": "Swaff789",
+
     "database": "dime_ERM",
     "host": "127.0.0.1",
     "port": 3306,
@@ -9,7 +11,7 @@
   },
   "test": {
     "username": "root",
-    "password": "Swaff789",
+    "password": "root",
     "database": "database_test",
     "host": "127.0.0.1",
     "port": 3306,
