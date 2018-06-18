@@ -23,8 +23,10 @@ var email = {
             returnHtml +=
                 `Total Price: ${dbInvoice.total_price}<br>`
             console.log(returnHtml);
+            if(dbInvoice.buyer_email !== null){
             email.sendEmail(dbInvoice.buyer_email, "Invoice", returnHtml);
-        })
+            }
+        });
     },
     sendEmail: function (to, subject, returnHtml) {
         nodemailer.createTestAccount((err, account) => {

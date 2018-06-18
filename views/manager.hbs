@@ -55,7 +55,10 @@
 
               <div class="col-lg-6">
                   <form id="UpdateProduct" height='250' data-product-id=1>
-                    <h2><button id="prevProd" class="btn disabled" type="button"><</button>Update Current Product<button id="nextProd" type="button" class="btn">></button></h2>
+                    <h2><button id="prevProd" class="btn disabled" type="button"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+                    Update Current Product
+                    <button id="searchProd" type="button" class = "btn"  data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    <button id="nextProd" type="button" class="btn"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button></h2>
                     <div class="form-group">
                         <label for="productUpdateName" class="sc-only">ProductName</label>
                         <input type="text" class="form-control" id="productUpdateName" placeholder="Product Name">
@@ -73,7 +76,27 @@
               </div>
           </div>
       </div>  
-    <hr />    
+    <hr />
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Search by Product Id</h4>
+        </div>
+        <div id="searchPrompt" class="modal-body">
+        <label for="searchFor">Product Id:</label>
+        <input type="text" id="searchFor" class="form-control">
+        <button id="submitSearch" type="button" class="btn btn-lg" data-dismiss="modal">Search</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!--End of Modal content-->
+          
     <div class="container">
         <footer class="footer">
             <p>&copy; 2018 DIME Company, Inc.</p>
@@ -82,6 +105,7 @@
     
 </div>
       <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="/assets/js/apiCalls.js"></script>
       <script src="/assets/js/manager.js"></script>    
 </body>

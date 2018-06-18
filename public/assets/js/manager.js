@@ -1,6 +1,7 @@
 getProducts().then((products) => {
     $("#prevProd").on("click", () => { scrollProduct(-1) });
     $("#nextProd").on("click", () => { scrollProduct(1) });
+    $("#submitSearch").on("click", () => {searchForId()});
     $("#submitUpdate").on("click", () => {updateExistingProduct()})
     displayProduct(1);
 });
@@ -13,7 +14,7 @@ function scrollProduct(direction) {
         console.log($("#UpdateProduct").attr("data-product-id"));
         switch (direction) {
             case -1:
-                $("nextProd").removeClass("disabled");
+                $("#nextProd").removeClass("disabled");
                 if (currentId === 1) {
                     break;
                 }
@@ -28,6 +29,9 @@ function scrollProduct(direction) {
                 break;
             case 1:
                 $("#prevProd").removeClass("disabled");
+                if (currentId === products.length){
+                    break;
+                }
                 if (currentId === products.length - 1) {
                     $("#nextProd").addClass("disabled");
                 } else {
@@ -51,6 +55,11 @@ function displayProduct(currentId) {
 
     })
 }
+function searchForId(){
+    currentId = parseInt($("#searchFor").val().trim())
+    $("UpdateProduct").attr("data-product-id",currentId);
+    displayProduct(currentId);
+}
 
 function createNewProduct() {
     var newProduct = {
@@ -59,7 +68,9 @@ function createNewProduct() {
         stock_quantity: parseInt($("#productCreateStock").val().trim())
     };
     console.log(newProduct);
-    console.log(createProduct(newProduct));
+    console.log(createProduct(newProduct).catch((err)=>{
+        alert("Data could not be added to database, Please check all fields to make sure they are accurate");
+    }));
 }
 function updateExistingProduct(){
     var newProduct = {
@@ -69,6 +80,8 @@ function updateExistingProduct(){
         stock_quantity: parseInt($("#productUpdateStock").val().trim()),
     };
     console.log(newProduct);
-    console.log(updateProduct(newProduct));
+    console.log(updateProduct(newProduct).catch((err)=>{
+        alert("Data could not be added to database, Please check all fields to make sure they are accurate");
+    }));
 
 }

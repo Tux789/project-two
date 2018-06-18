@@ -55,7 +55,7 @@ getInvoices = function(){
 
 getInvoice = function(id){
     return new Promise((resolve,reject) => {
-        $.get("/api/invoice" + id, (data) => {
+        $.get("/api/invoice/" + id, (data) => {
             resolve(data);
         }).catch((err) => {
             reject(err);
@@ -73,7 +73,7 @@ createInvoice = function(invoice){
     });
 };
 
-updateInvoice = function(id, invoice){
+updateInvoice = function(invoice){
     return new Promise ((resolve, reject) => {
         $.ajax({
             method: "PUT",
