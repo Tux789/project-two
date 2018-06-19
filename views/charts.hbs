@@ -15,24 +15,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   </head>
   <body>
-    <div class="container">
-      <div class="header clearfix">
+
+  <header id="masthead">
+      <div class="header clearfix" id="box">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" ><a href="/dashboard">About</a></li>
+            <li role="presentation" class="disabled" ><a href="/dashboard">About</a></li>
             <li role="presentation" ><a href="/order">Order</a></li>
             <li role="presentation" ><a href="/invoice">Invoice</a></li>
             <li role="presentation" ><a href="/manager">Manager</a></li>
-            <li role="presentation"><a href="/charts">Statistics</a></li>
-            <li role="presentation"><a href="/signin">LogOut</a></li>
+            <li role="presentation" ><a href="/charts">Statistics</a></li>
+            <li role="presentation" ><a href="/signin">Logout</a></li>
           </ul>
         </nav>
         <h2 class="text-muted">Dime</h2>
       </div>
+  </header>
+    <br>
+    <br>
+    <br>
+    <br>
       <div class="container" id="charts">
-          <div class=""
-      </div>
-      <div class="container">
           <div class="row">
               <div class="col-lg-6">
                 <canvas id="barChart" width="200" height="220"></canvas>
@@ -44,13 +47,12 @@
 
           </div>
       </div>
-
+    
 <hr/>
+
       <footer class="footer">
         <p>&copy; 2018 DIME Company, Inc.</p>
       </footer>
-
-    </div>    
   </body>
 
   <script>

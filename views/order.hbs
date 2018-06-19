@@ -15,28 +15,28 @@
 
   </head>
   <body>
-    <div class="container">
-      <div class="header clearfix">
+  <header id="masthead">
+      <div class="header clearfix" id="box">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" ><a href="/dashboard">About</a></li>
-            <li role="presentation" class="disabled" ><a href="/order">Order</a></li>
+            <li role="presentation" class="disabled" ><a href="/dashboard">About</a></li>
+            <li role="presentation" ><a href="/order">Order</a></li>
             <li role="presentation" ><a href="/invoice">Invoice</a></li>
             <li role="presentation" ><a href="/manager">Manager</a></li>
             <li role="presentation" ><a href="/charts">Statistics</a></li>
-            <li role="presentation"><a href="/signin">Logout</a></li>
+            <li role="presentation" ><a href="/signin">Logout</a></li>
           </ul>
         </nav>
         <h2 class="text-muted">Dime</h2>
       </div>
+  </header>
 
      <!-- <div class="jumbotron">
         <h1 class="text-center">Welcome to Dime</h1>
         <p class="lead"></p>
       </div> -->
 
-<div class="container">
- 
+<div class="container" >
         <div id="card" class="card-body" id="create" name="invoice">
          <!-- <form id="create" name="invoice">-->
             <h2>Make your Order</h2>
@@ -133,7 +133,6 @@
             <button id="submit" type="button" class="btn btn-lg btn-success">Submit</button>
             {{!-- <input id="submit" type="submit" class="btn btn-lg btn-primary" value="Edit"> --}}
             {{!-- <input id="submit" type="submit" class="btn btn-lg btn-warning" value="Cancel"> --}}
-        </form>
       </div>  
     </div>
   </div>

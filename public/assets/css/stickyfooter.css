@@ -1,14 +1,14 @@
 
   .footer {
-    position: absolute;
+    position: relative;
+  /*  position: absolute;*/
     padding: 25px 0;
     background: #698a8a;
     color: #fff;
-    height: 100px;
+    height: 60px;
     text-align: center;
     font-size: 15px;
-    opacity: 0.75; 
-    bottom: 0;
+    opacity: 0.75;
     width: 100%;
     /* Set the fixed height of the footer here */
   /*  height: 60px;*/
