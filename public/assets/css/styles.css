@@ -115,6 +115,12 @@ p, label {
   margin-top: 50px;
 }
 
+.hr {
+  color: black;
+  font-weight: bold;
+
+}
+
 /* Sign In */
 
 .jumbotron {
@@ -132,6 +138,10 @@ p, label {
 #category {
   color: #313d3d;
   margin-bottom: 180px;
+}
+
+.row marketing {
+ background-color: white;
 }
 
 
