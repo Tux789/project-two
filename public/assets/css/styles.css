@@ -165,7 +165,7 @@ p, label {
 }
 
 #card {
-  width: 100%;
+/*  width: 100%; */
   border: 2px solid black;
   padding: 25px;
   text-align: none;
