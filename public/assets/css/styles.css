@@ -1,0 +1,231 @@
+
+#Name {
+  width: 300px;
+  height: 70px;
+/*  background: #b5bebe; */
+  opacity: 0.90; 
+  float: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  line-height: 90px;
+  color: #666; 
+  font-size: 45px;
+  text-decoration: none;
+  
+}
+.invisible{
+  visibility: hidden !important;
+}
+.visible{
+  visibility: visible;
+}
+.order-cancelled{
+  border: 5px solid red !important;
+  background: rgba(255,0,0,0.5) !important;
+}
+
+.box {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  clear: both;
+}
+
+#masthead, header {
+  background: #fff; 
+  margin: 0 0 40px;
+  z-index: 99;
+  color: #fff;
+  overflow: auto;
+  border-bottom: 2px solid #ccc;
+  position: fixed;
+  width: 100%;
+}
+
+.nav {
+  float: right;
+}
+
+nav {
+  float: right;
+  margin-top: 25px;
+}
+
+nav a {
+  color: #999;
+  text-decoration: none;
+  margin-left: 15px;
+  display: inline-block;
+  border-left: 1px solid #efefef;
+  padding-left: 15px;
+  line-height: 18px;
+}
+
+nav a:first-child {
+  border-left: 0 none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body { 
+background-image: url("https://www.pixeden.com/media/k2/galleries/112/002-subtle-light-pattern-background-texture.jpg");
+background-position: center;
+background-repeat:  no-repeat;
+background-attachment: fixed;
+background-size:  cover;
+}
+
+
+div, body{
+margin: 0;
+padding: 0;
+font-family: exo, sans-serif;
+color: black;
+}
+
+#info {
+
+  width: 75%;
+  height: 40%;
+  border: 2px, black;
+}
+
+#example {
+  width: 75%;
+  height: 50%;
+  border: 2px, black;
+}
+
+.main {
+
+  width: 75%;
+ /* height: 75%;*/
+  border: 2px, solid black;
+  padding: 100px;
+}
+
+/*.footer {
+  position: relative;
+  padding: 25px 0;
+  background: #698a8a;
+  color: #fff;
+  height: 100px;
+  clear: both;
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.75; 
+}*/
+
+/* Dashboard */
+.jumbotron {
+  text-align: center;
+  color: #313d3d;
+}
+
+#category {
+  color: #313d3d;
+}
+
+
+
+/* order */
+
+.card-text {
+  margin-top: 10px;
+  color: white;
+}
+
+/*.card-title {
+  font-size: 50px;
+}*/
+
+#card-body {
+  width: 100%;
+  border: 2px solid black;
+ /* padding: 25px;*/
+  background-color: #f5fafa;
+  margin-bottom: 50px;
+}
+
+#card {
+  width: 100%;
+  border: 2px solid black;
+  padding: 25px;
+  text-align: none;
+  background-color: #698a8a;
+  margin-top: 75px;
+  margin-bottom: 100px;
+  color: white;
+}
+
+.input-group-append {
+  background-color: white;
+}
+
+.input-group-prepend {
+  background-color: white;
+}
+
+/* manager */
+
+.row {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#create {
+  width: 500px;
+  border: 2px solid black;
+  padding: 25px;
+  margin: 100px 30px 300px 35px;
+  clear: left;
+  float: left;
+  background: #698a8a;
+  color: white;
+ 
+
+}
+
+#UpdateProduct {
+  width: 500px;
+  border: 2px solid black;
+  padding: 25px;
+  margin: 100px 35px 300px 50px;
+  float: right;
+  clear: right;
+  background: #698a8a;
+  color: white;
+}
+
+#prevProd {
+  margin-right: 5px;
+  background-color: white;
+  color: #698a8a;
+}
+
+#nextProd {
+  margin-left: 5px;
+  color: #698a8a;
+}
+
+#button {
+  background-color: white; 
+  border: none;
+  color: rgb(66, 66, 66);
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+/*charts */
+
+#charts {
+  width: 1200px;
+  background-color: white;
+  margin-top: 30px;
+}
