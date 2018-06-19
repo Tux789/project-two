@@ -168,6 +168,7 @@ p, label {
   background-color: white;
 }
 
+
 /* manager */
 
 .row {
@@ -206,14 +207,14 @@ p, label {
 
 #prevProd {
   margin-right: 0px;
-  background-color: white;
   color: #698a8a;
+  background: white;
 }
 
 #nextProd {
-  margin-left: 0px;
-  background-color: white;
+  margin-left: 10px;
   color: #698a8a;
+  background: white;
 }
 
 #button {
