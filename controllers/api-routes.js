@@ -137,5 +137,8 @@ module.exports = function (app, passport) {
 
     app.get("/api/charts/scatter", function(req,res){
         charts.getScatterChart(req,res);
+    });
+    app.get("/api/charts/bar",function(req,res){
+        charts.getBarChart(req,res);
     })
 } 
