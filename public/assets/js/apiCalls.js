@@ -97,6 +97,16 @@ getPieChart = function(){
     });
 };
 
+getBarChart = function(){
+    return new Promise ((resolve,reject) => {
+        $.get("/api/charts/bar",(data) => {
+            resolve(data);
+        }).catch((err)=> {
+            reject(err);
+        });
+    });
+};
+
 getScatterChart = function(){
     return new Promise ((resolve,reject) => {
         $.get("/api/charts/scatter",(data) => {
