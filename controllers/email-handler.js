@@ -29,16 +29,16 @@ var email = {
         });
     },
     sendEmail: function (to, subject, returnHtml) {
-        nodemailer.createTestAccount((err, account) => {
+         //nodemailer.createTestAccount((err, account) => {
             let transporter = nodemailer.createTransport({
                 host: process.env.SMTP_HOST,
                 port: process.env.SMTP_PORT,
-                secure: false, // true for 465, false for other ports
+                secure: true, // true for 465, false for other ports
                 auth: {
                     user: process.env.SMTP_USER, // generated ethereal user
                     pass: process.env.SMTP_PASSWORD // generated ethereal password
                 }
-            });
+             });
 
             let mailOptions = {
                 from: '"Dime" <dime@dime.com>', // sender address
@@ -59,7 +59,7 @@ var email = {
                 // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
                 // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
             });
-        })
+        
     },
 
 
